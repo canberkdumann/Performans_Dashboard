@@ -1,0 +1,15 @@
+{
+    "type": "mashup",
+    "name": "test_Performans2",
+    "description": "Basic responsive mashup template",
+    "version": "1.0.0",
+    "author": "Cemil Canberk Duman",
+    "homepage": "",
+    "preview": "robot.png",
+    "keywords": "qlik-sense, visualization, mashup",
+    "license": "",
+    "repository": "",
+    "dependencies": {
+        "qlik-sense": ">=3.0.x"
+    }
+}

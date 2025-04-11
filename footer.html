@@ -1,0 +1,444 @@
+<div class="page-wrapper">
+    <div id="waterdrop"></div>
+    <footer class="footer-general">
+      <div class="footer-top" >
+        <div class="container">
+          <div class="row-footer">
+            <div class="col-lg-6 col-md-12 col-sm-12 footer-col-3">
+              <div class="widget footer_widget">
+                <h5 class="footer-title">Adres</h5>
+                <div class="gem-contacts">
+                  <div class="gem-contacts-item gem-contacts-address">Vakıfbank Genel Müdürlük:<br> Finanskent Mahallesi Finans Caddesi No:40/1 Ümraniye/İstanbul
+                  </div>
+                  <div class="gem-contacts-item gem-contacts-phone"><i class="fa fa-phone" aria-hidden="true"></i> Telefon: 0850 222 0 724</div>     
+                  <div class="gem-contacts-item gem-contacts-phone"><i class="fa fa-fax" aria-hidden="true"></i> Faks: +90 (216) 724 39 09</div>     
+
+    <div class="wrapper">
+      <div class="button" onclick="document.body.classList.add('active')">
+          <span class="button-text">Nasıl Perfo Destek kaydı açarım?</span>
+          <div class="button-backgrounds">
+              <div class="button-circle button-circle1"></div>
+              <div class="button-circle button-circle2"></div>
+              <div class="button-circle button-circle3"></div>
+              <div class="button-circle button-circle4"></div>
+          </div>
+      </div>
+  </div>
+
+  <div class="wrapper">
+      <div class="popup">
+          <div class="popup-inside">
+              <div class="backgrounds">
+                  <div class="background"></div>
+                  <div class="background background2"></div>
+                  <div class="background background3"></div>
+                  <div class="background background4"></div>
+                  <div class="background background5"></div>
+                  <div class="background background6"></div>
+              </div>
+          </div>
+          <div class="content">
+              <div class="content-wrapper">
+                  <p>Konu ile ilgili soru ve taleplerinizi VIT “İş Talep Girişi“ ekranından kategori sekmesinden “Performans Yönetimi”, alt kategori sekmesinden “Perfo Destek” başlığını seçerek iletmenizi rica ederiz.
+                 </p>
+                 <button class="close-btn-popup" onclick="document.body.classList.remove('active')">X</button>
+              </div>
+          </div>
+      </div>
+  </div>
+
+
+
+
+<style>
+  @import url('https://fonts.googleapis.com/css?family=Raleway');
+  
+
+:root, button{
+    font-family: 'Dax', sans-serif;
+}
+
+
+.color{
+    background: linear-gradient(to right, #e1e0ff, #d7fadd);
+}
+
+body{
+    background: #191919;
+    background: white;
+    user-select: none;
+    letter-spacing: 3px;
+    color: #b9b9b9;
+}
+
+h1{
+    padding-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 16px;
+    font-family: 'Dax', sans-serif;
+}
+
+p{
+    padding-bottom: 10px;
+    font-family: 'Dax', sans-serif;
+}
+
+p:last-of-type{
+    padding-bottom: 0;
+}
+
+.wrapper {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Bu satır öğeyi sola sabitler */
+}
+
+.button{
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    -webkit-appearance: none;
+    background: none;
+    outline: none;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    border-radius: 2px;
+    transition: all 0.5s ease;
+    font-weight: 600;
+    font-size: 14px;
+    height: 40px;
+    width: 290px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(0,0,0,0.06);
+    border-radius: 0px;
+    box-shadow: 0 0 0 white, 0 0 0 white;
+}
+
+.button-text{
+    display: flex;
+    position: relative;
+    z-index: 2;
+    background: linear-gradient(to right, #000000, #000000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+.button-circle2{
+    top: auto;
+    bottom: 0;
+}
+
+.button-circle3{
+    left: auto;
+    right: 0;
+    box-shadow: 0 0 10px #e0b21a, 0 0 20px #e0b21a, 0 0 30px #e0b21a;
+}
+
+.button-circle4{
+    left: auto;
+    top: auto;
+    bottom: 0;
+    right: 0;
+    box-shadow: 0 0 10px #e0b21a, 0 0 20px #e0b21a, 0 0 30px #e0b21a;
+}
+
+.button:hover{
+    box-shadow: -15px 0 70px -15px #e0b21a, 15px 0 70px -15px #e0b21a;
+}
+
+.button:hover .button-circle1{
+    transform: translate(-15px, -15px) scale(0);
+}
+
+.button:hover .button-circle2{
+    transform: translate(-15px, 15px) scale(0);
+}
+
+.button:hover .button-circle3{
+    transform: translate(15px, -15px) scale(0);
+}
+
+.button:hover .button-circle4{
+    transform: translate(15px, 15px) scale(0);
+}
+
+.button:hover .button-circle{
+    box-shadow: none;
+}
+.popup{
+    opacity: 0;
+    visibility: hidden;
+    height: 100px;
+    width: 500px;
+    flex-shrink: 0;
+    border-radius: 3px;
+    position: fixed; /* Ekranın her yerine sabitler */
+    top: 50%; /* Yatayda ortalar */
+    left: 50%; /* Dikeyde ortalar */
+    transform: translate(-50%, -50%); /* Pop-up'ı tam olarak ortalar */
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+/* Diğer CSS kodları değişmeden kalabilir */
+.popup-inside{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: 0 0 0 black;
+    transition:
+        box-shadow 0.5s ease 0.7s,
+        border-radius 0.35s ease 0.7s;
+}
+
+/* Arka planlar ve içerik */
+.backgrounds, .background, .background2, .background3, .background4, .background5, .background6 {
+    /* Arka plan özellikleri değişmeden kalabilir */
+}
+
+.content{
+    --offset: 0;
+    position: absolute;
+    left: var(--offset);
+    right: var(--offset);
+    bottom: var(--offset);
+    top: var(--offset);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.35s ease 0.75s;
+	z-index:10;
+}
+.content-wrapper{
+position: relative;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    color: black;
+	font-weight:bold;
+}
+
+/* Kapanma butonu */
+/* Kapanma butonu */
+.close-btn-popup {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  color: red;
+  cursor: pointer;
+  transition-duration: 500ms;
+}
+
+.close-btn-popup:hover,.close:hover {
+  transform:rotate(180deg) scale(1.05) ;
+  transition-duration: 500ms;
+}
+
+
+/* Pop-up aktif olduğunda geçiş animasyonları */
+body.active .content {
+    opacity: 1;
+    transform: none;
+}
+
+body.active .popup {
+    opacity: 1;
+    visibility: visible;
+}
+
+body.active .popup-inside {
+    border-radius: 0;
+    box-shadow: -50px 0 200px -50px #e0b21a, 50px 0 200px -50px #e0b21a;
+}
+
+body.active .background {
+    transform: scale(1);
+}
+
+body.active .background6 {
+    transform: scale(8);
+}
+
+</style>
+
+
+
+                </div>
+            </div>
+               </div>
+           
+            <div class="col-12 col-lg-6 col-md-6 col-sm-12">
+              <div class="row">
+                <div class="col-12 col-lg-12 col-md-6 col-sm-6">
+                  <div class="widget">
+                    <h5 class="footer-title">Bize Ulaşın</h5>
+                    <div class="textwidget">
+                      <div role="form" class="wpcf7" id="wpcf7-f4-o1" lang="en-US" dir="ltr">
+
+                        <form method="post" class="wpcf7-form" novalidate="novalidate">
+
+                          <div class="contact-form-footer">
+                            <div>
+                                <p><span class="wpcf7-form-control-wrap your-first-name"><input type="text" name="your-first-name" value="" size="40" class="wpcf7-form-control wpcf7-text" aria-invalid="false" placeholder="Adınız"></span></p>
+                                <p>
+                                    <span class="wpcf7-form-control-wrap your-message">
+                                      <textarea name="your-message" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false" placeholder="Mesajınız"></textarea>
+                                    </span>
+                                </p>
+                            </div>
+                            <div>
+                                <input type="submit" value="Gönder" class="wpcf7-form-control wpcf7-submit" onclick="sendEmail(); sendForm(); return false;">
+                                <span class="ajax-loader"></span>
+                            </div>  
+						                          
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+			
+
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container"> 
+          <div class="row">
+
+            <div class="col-md-3">
+                <div class="footer-site-info">2025 © <a href="https://www.vakifbank.com.tr/tr" target="_blank" class="footer-link">VAKIFBANK</a></div>
+              </div>                                         
+
+            <div class="col-md-6">
+              <nav id="footer-navigation" class="site-navigation footer-navigation centered-box" role="navigation">
+                <ul id="footer-menu" class="nav-menu styled clearfix inline-inside">
+                    <li id="menu-item-26" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-26">
+                      <a href="https://bizimyerimiz/fil-hafiza/Sayfalar/document-items.aspx?listTitle=Organization&RootFolder=/fil-hafiza/organization/B020/B017/Performans%20Y%C3%B6netimi/PerfoK%C3%BCt%C3%BCphane">Perfo Kütüphane</a>
+                    </li>
+                  </ul>                  
+              </nav>
+            </div>
+
+
+                          
+
+            <div id="myModal2" class="modal2">
+              <div class="modal-content2">
+                <span class="close" onclick="closeModal2()">&times;</span>
+                <h2>Perfo Destek</h2>
+                <p>Konu ile ilgili soru ve taleplerinizi VIT “İş Talep Girişi“ ekranından kategori sekmesinden “Performans Yönetimi”, alt kategori sekmesinden “Perfo Destek” başlığını seçerek iletmenizi rica ederiz.</p>
+              </div>
+            </div>
+
+
+            <style>
+              /* Modal arka planı */
+              .modal2 {
+                display: none;
+                /* Başlangıçta görünmez */
+                position: fixed;
+                z-index: 1;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                overflow: auto;
+                background-color: rgba(0, 0, 0, 0.4);
+                /* Yarı şeffaf arka plan */
+              }
+
+              /* Modal içeriği */
+              .modal-content2 {
+                background-color: #fefefe;
+                margin: 15% auto;
+                padding: 20px;
+                border: 1px solid #888;
+                width: 80%;
+                /* genişlik oranını isteğinize göre ayarlayabilirsiniz */
+              }
+
+              /* Kapatma butonu */
+              .close {                
+                font-size: 39px;
+                font-weight: bold;
+				opacity:1!important;
+              }
+
+              .close:hover,
+              .close:focus {
+                color: black;
+                text-decoration: none;
+                cursor: pointer;
+              }
+            </style>
+
+            <script>
+              function openModal2() {
+                document.getElementById("myModal2").style.display = "block";
+              }
+
+              function closeModal2() {
+                document.getElementById("myModal2").style.display = "none";
+              }
+            </script>
+			
+
+
+            <div class="col-md-3">
+              <div id="footer-socials">
+                <div class="socials inline-inside socials-colored">
+
+                  <a href="https://www.facebook.com/vakifbank/?locale=tr_TR" target="_blank" title="Facebook" class="socials-item">
+                    <i class="fab fa-facebook-f facebook"></i>
+                  </a>
+                  <a href="https://twitter.com/VakifBank?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank" title="Twitter" class="socials-item">
+                    <i class="fab fa-twitter twitter"></i>
+
+                  </a>
+                  <a href="https://www.instagram.com/vakifbank/" target="_blank" title="Instagram" class="socials-item">
+                    <i class="fab fa-instagram instagram" style="color:red"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <script src="https://daniellaharel.com/raindrops/js/raindrops.js"></script>
+
+ <script> jQuery('#waterdrop').raindrops({color:'#1c1f2f', canvasHeight:150, density: 0.1, frequency: 20});
+</script>
+
+

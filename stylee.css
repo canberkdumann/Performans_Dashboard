@@ -1,0 +1,117 @@
+
+.container1 {
+	display: flex;
+    justify-content: center;
+	align-items: center;
+	width: 95%;
+	height: 80%;
+}
+
+.chat {
+	height: 375px;
+	width: 48vw;
+	display: flex;
+	flex-direction: column;
+  justify-content: center;
+	
+} 
+
+::-webkit-input-placeholder { 
+	color: .711 
+}
+ 
+input {
+  padding: 16px;
+  margin-left: auto;
+  border-radius: 10px;
+  border: 4px solid rgb(238, 204, 12);
+  width: 57.5%;
+  margin-right: 5vw;
+  background: none;
+}
+
+
+.messages {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;  /* Yalnızca dikey kaydırma çubuğu ekle */
+    overflow-x: hidden;  /* Yatay kaydırma çubuğu gizle */
+    height: 90%;
+    width: 80%;
+    background: none;
+    padding: 16px;
+    margin: 9px;
+	margin-left:0px;
+    border-radius: 10px;
+    border: 5px solid rgb(238, 204, 12); 
+    margin-right: 240px;
+}
+
+
+/* Kaydırma çubuğu (scrollbar) özelliklerini özelleştirme */
+.messages::-webkit-scrollbar {
+    width: 13px;  /* Kaydırma çubuğunun genişliği */
+}
+
+.messages::-webkit-scrollbar-thumb {
+    background-color: rgb(238, 204, 12); /* Kaydırma çubuğunun rengi */
+    border-radius: 10px; /* Kaydırma çubuğunun yuvarlak köşeleri */
+    border: 3px solid #737373 ; /* Kaydırma çubuğunun etrafında beyaz bir kenarlık */
+}
+
+.messages::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Kaydırma çubuğu arka planı (track) */
+    border-radius: 10px;
+}
+
+.messages::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(255, 165, 0); /* Kaydırma çubuğu üzerine gelindiğinde renk değişikliği */
+}
+
+
+#bot {
+	margin-left: auto;
+}
+
+.bot {
+	font-family: Consolas, 'Courier New', Menlo, source-code-pro, Monaco,  
+	monospace;
+}
+
+.avatar {
+	height: 30px;
+}
+
+.response {
+  display: flex;
+  align-items: center;
+  margin: 1%;
+  color: black;
+  font-size: 16px;
+  letter-spacing: normal;
+  font-family: 'Dax', sans-serif !important;
+
+  /* Mesaj uzun olduğunda alt satıra geçmesini sağla */
+  word-wrap: break-word;    /* Kelimenin taşmasını engeller ve alt satıra geçmesini sağlar */
+  white-space: normal;      /* Satır sonlarına gelindiğinde metni kırar */
+  max-width: 100%;          /* Mesaj kutusunun genişliği ekranı geçmesin diye %100 yapılabilir */
+  /* Eğer kutu içerisinde aşırı uzun metin varsa, metnin taşmasını engellemek için */
+  overflow-wrap: break-word;  /* Uzun kelimeleri alt satıra geçirir */
+  
+}
+
+
+
+/* Mobile */
+
+@media only screen and (max-width: 980px) {
+  .container {
+		flex-direction: column; 
+		justify-content: flex-start;
+	}
+	.chat {
+		width: 75vw;
+		margin: 10vw;
+	}
+}
+
