@@ -122,18 +122,28 @@ window.onload = function() {
     xhr.send(form);  // Form verilerini gönder
   }
 
-  // mailto: ile Outlook açma
-  function sendEmail() {
-    var message = document.querySelector('textarea[name="your-message"]').value;
+// config.json dosyasından email adresini dinamik olarak al
+fetch('config.json')
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('config.json yüklenemedi');
+    }
+    return response.json();
+  })
+  .then(config => {
+    const email = config.contactEmail;
 
-    var email = "ikperformans@vakifbank.com.tr";
-    var subject = "İletişim Formu Mesajı";
-    
-    var body = message || "Lütfen bir mesaj giriniz !"; // Eğer mesaj boşsa default bir mesaj göster
-    
-    // mailto: bağlantısını oluştur
-    window.location.href = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-  }
+    // Email ile işlem yap (örnek: mailto ile yönlendir)
+    document.getElementById("send-button").addEventListener("click", function () {
+      const message = document.querySelector('textarea[name="your-message"]').value || "Mesaj girilmedi.";
+      const subject = "İletişim Formu Mesajı";
+      window.location.href = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
+    });
+  })
+  .catch(error => {
+    console.error("E-posta adresi yüklenemedi:", error);
+  });
+
   
 
 
