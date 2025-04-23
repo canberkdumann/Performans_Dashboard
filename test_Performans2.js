@@ -237,21 +237,7 @@ var modal = document.getElementById("myModal");
                 modal1.style.display = "none"; // Modalı gizle
             }
         }
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+			
 		var modal2 = document.getElementById("myModal2");
         var btn2 = document.querySelector(".filter-drawer-toggle2");
         var span2 = document.getElementsByClassName("close2")[0];
@@ -272,19 +258,6 @@ var modal = document.getElementById("myModal");
                 modal2.style.display = "none"; // Modalı gizle
             }
         }
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-
 
         var root = this.root;
         $(document).ready(function() {
@@ -360,39 +333,6 @@ function sortDropdownItems() {
 // Sayfa yüklendiğinde dropdown öğelerini sırala
 window.addEventListener('load', sortDropdownItems);
 
-
-  
-  
-  
-/*
-// Combo box (select) elementini seçiyoruz
-const faqSelect = document.getElementById('faqSelect');
-
-// İlk input alanını seçiyoruz
-const inputField = document.getElementById('input');
-
-// Select (combo box) elemanına tıklanıldığında ne olacağını belirliyoruz
-faqSelect.addEventListener('change', function() {
-    // Seçilen değeri alıyoruz
-    const selectedValue = faqSelect.value;
-    
-    // Eğer bir değer seçilmişse, input alanına o değeri ekliyoruz
-    if (selectedValue) {
-        inputField.value = selectedValue; // Combo box'dan seçilen değeri input alanına yazıyoruz
-    } else {
-        // Eğer hiçbir şey seçilmemişse, input alanını temizliyoruz
-        inputField.value = ""; 
-    }
-});  */
-
-
-
-
-
-
-
-
-
 let correctAnswer = 'C'; // Correct answer for this question
 
 // Function to start the game and display the question
@@ -409,49 +349,6 @@ function startGame() {
     document.querySelector('button[onclick="checkAnswer(\'C\')"]').textContent = "Kaynak";
     document.querySelector('button[onclick="checkAnswer(\'D\')"]').textContent = "Verimlilik (A)";
 }
-
-/*
-function checkAnswer(selectedOption) {
-    // Show the result message based on the selected answer
-    let resultMessage = document.getElementById('result-message');
-    if (selectedOption === correctAnswer) {
-        resultMessage.style.color = 'green';
-        resultMessage.textContent = 'Tebrikler 🎉';
-    } else {
-        resultMessage.style.color = 'red';
-        resultMessage.textContent = 'Yanlış Cevap 😢';
-    }
-    resultMessage.style.display = 'block';
-
-    // Optionally, disable buttons after answering
-    const optionButtons = document.querySelectorAll('.option-button');
-    optionButtons.forEach(button => button.disabled = true);
-}
-
-// Function to show the modal (For testing purposes)
-function showModal() {
-    document.getElementById("myModal2").style.display = "block";  // Show the modal
-}
-
-// Function to close the modal (For testing purposes)
-function closeModal() {
-    document.getElementById("myModal2").style.display = "none";  // Hide the modal
-}
-
-// Close the modal when clicking on the close icon
-document.querySelector('.close2').addEventListener('click', closeModal); */
-
-
-
-
-
-
-
-
-
-
-
-
 
 let currentQuestionIndex = 0;
 let answeredQuestions = {}; // Kullanıcının verdiği cevapları saklayan nesne
