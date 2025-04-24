@@ -146,63 +146,62 @@ fetch('config.json')
 
   
 
+// config dosyasından URL'yi çek
+fetch('config/config.json')
+  .then(response => {
+    if (!response.ok) throw new Error('Config dosyası yüklenemedi');
+    return response.json();
+  })
+  .then(config => {
+    const dashboardUrl = config.dashboardUrl;
 
-document.getElementById("performance-report-link").addEventListener("click", function(event) {
-    event.preventDefault();
+    document.getElementById("performance-report-link").addEventListener("click", function(event) {
+        event.preventDefault();
 
-    var iframe = document.getElementById("report-iframe");
-    var progressBar = document.getElementById("progress-bar");
-    var progressBarFrame = document.getElementById("progress-bar-frame");
-    var loadingText = document.getElementById("loading-text");
+        const iframe = document.getElementById("report-iframe");
+        const progressBar = document.getElementById("progress-bar");
+        const progressBarFrame = document.getElementById("progress-bar-frame");
+        const loadingText = document.getElementById("loading-text");
 
-    // Yükleniyor yazısını göster
-    loadingText.style.display = "block";
+        loadingText.style.display = "block";
+        progressBarFrame.style.display = "block";
+        iframe.style.display = "none";
 
-    // Progress bar çerçevesini göster
-    progressBarFrame.style.display = "block";
+        // Güvenli şekilde src'yi ayarla
+        iframe.src = dashboardUrl;
 
-    // İframe'i gizle, yüklenene kadar görünmesin
-    iframe.style.display = "none";
+        const duration = 15000;
+        const startTime = Date.now();
 
-    // İframe'in src özelliğini ayarla
-    iframe.src = "https://pilot.vakifbank.com.tr/sense/app/5eb3dcd8-3079-4c12-a6dd-c1f1c96d365e/sheet/63599a98-2ad2-4b73-a2f2-a003f6111f87/state/analysis";
+        function updateProgressBar() {
+            const elapsedTime = Date.now() - startTime;
+            const progress = Math.min((elapsedTime / duration) * 100, 100);
+            progressBar.style.width = progress + "%";
 
-    // Progress bar'ın dolma süresi (ms cinsinden)
-    var duration = 15000; // 15 saniye
-    var startTime = Date.now(); // Başlangıç zamanı
-
-    function updateProgressBar() {
-        var elapsedTime = Date.now() - startTime; // Geçen süreyi hesapla
-        var progress = Math.min((elapsedTime / duration) * 100, 100); // Yüzdeyi hesapla ve 100%'ü geçmesini engelle
-
-        // Progress bar'ı güncelle
-        progressBar.style.width = progress + "%";
-
-        if (elapsedTime < duration) {
-            requestAnimationFrame(updateProgressBar); // Eğer süre bitmediyse, tekrar çağır
+            if (elapsedTime < duration) {
+                requestAnimationFrame(updateProgressBar);
+            }
         }
-    }
 
-    // Progress bar'ı doğrusal bir şekilde doldur
-    requestAnimationFrame(updateProgressBar);
+        requestAnimationFrame(updateProgressBar);
 
-    // iframe'i pozisyonla yukarı kaydır
-    iframe.style.position = "relative";
-    iframe.style.top = "-90px"; // Bu değeri ihtiyacınıza göre ayarlayabilirsiniz
+        iframe.style.position = "relative";
+        iframe.style.top = "-90px";
+        iframe.style.clipPath = "inset(90px 0 0 0)";
 
-    // iframe'in üst kısmını 90px kırp
-    iframe.style.clipPath = "inset(90px 0 0 0)";
+        iframe.onload = function() {
+            setTimeout(() => {
+                progressBarFrame.style.display = "none";
+                loadingText.style.display = "none";
+                iframe.style.display = "block";
+            }, duration);
+        };
+    });
+  })
+  .catch(err => {
+    console.error("Dashboard URL yüklenemedi:", err);
+  });
 
-    // Iframe'in yüklendiğinde görünür olmasını sağla
-    iframe.onload = function() {
-        // 4.5 saniye sonra iframe'i göster
-        setTimeout(function() {
-            progressBarFrame.style.display = "none";  // Progress bar'ı gizle
-            loadingText.style.display = "none";  // Yükleniyor yazısını gizle
-            iframe.style.display = "block";  // İframe'i göster
-        }, duration); // 4.5 saniye sonra iframe gösterilecek
-    };
-});
 
 
 
